@@ -4492,6 +4492,7 @@ static void printVersionInfo(boolean terminal, FILE *infoFile)
   int 
     i;
 
+  /*
   sprintf(text[0], "\n\nThis is %s version %s released by Alexandros Stamatakis on %s.\n\n",  programName, programVersion, programDate);
   sprintf(text[1], "With greatly appreciated code contributions by:\n");
   sprintf(text[2], "Andre Aberer      (HITS)\n");     
@@ -4512,6 +4513,7 @@ static void printVersionInfo(boolean terminal, FILE *infoFile)
       else     
 	printBoth(infoFile, text[i]);
     }
+  */
   
 }
 
@@ -6700,6 +6702,8 @@ static void printModelAndProgramInfo(tree *tr, analdef *adef, int argc, char *ar
 	  else
 	    printBoth(infoFile, "\nAlignment has %d distinct alignment patterns\n\n",  tr->cdta->endsite);
 	  
+	  exit(0);
+
 	  if(adef->useInvariant)
 	    printBoth(infoFile, "Found %d invariant alignment patterns that correspond to %d columns \n", tr->numberOfInvariableColumns, tr->weightOfInvariableColumns);
 
